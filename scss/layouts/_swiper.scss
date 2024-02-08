@@ -1,0 +1,35 @@
+.swiper {
+  &-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &-wrapper {
+    margin-bottom: 16px;
+    z-index: 0;
+    @media screen and (min-width: $br-tablet) {
+        margin-bottom: 32px;
+    }
+  }
+
+  &-pagination {
+    position: relative;
+    z-index: 0;
+
+    &-bullet {
+      width: 8px;
+      height: 8px;
+      background-color: var(--clr-font-secondary);
+      opacity: 1;
+      
+      @media screen and (min-width: $br-desktop) {
+        width: 12px;
+        height: 12px;
+      }
+
+      &-active {
+        background-color: var(--clr-btn);
+      }
+    }
+  }
+}

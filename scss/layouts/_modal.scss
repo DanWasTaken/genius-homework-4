@@ -1,0 +1,138 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--clr-background-modal);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+  transition: opacity 0.2s, visibility 0.2s;
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+
+.modal {
+  position: relative;
+  background-color: var(--clr-background-dark);
+  background-image: url('../images/modal-background.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--clr-font-light);
+  width: 100%;
+  max-width: 724px;
+  max-height: 100%;
+  border-radius: 32px;
+  text-align: center;
+  overflow: auto;
+  margin: 0 16px;
+  padding: 16px 64px;
+
+  @media screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi), 
+  (min-resolution: 2dppx) {
+    background-image: url('../images/modal-background@2x.png');
+  }
+
+  @media screen and (min-width: $br-phone) {
+    padding: 24px 96px;
+  }
+
+  @media screen and (min-width: $br-tablet) {
+    padding: 36px 128px;
+  }
+
+  @media screen and (min-width: $br-desktop) {
+    padding: 42px 144px;
+  }
+
+  &__heading {
+    color: var(--clr-font-light);
+    margin: 0 auto;
+    font-size: 48px;
+    max-width: 412px;
+
+    @media screen and (min-width: $br-tablet) {
+      font-size: 64px;
+    }
+  }
+
+  & h3 {
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--clr-font-light);
+    margin: 40px auto 32px auto;
+    max-width: 274px;
+    text-align: center;
+
+    @media screen and (min-width: $br-tablet) {
+      font-size: 22px;
+    }
+
+    & .accent {
+      color: var(--clr-accent);
+    }
+  }
+
+  & h4 {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.5em;
+    max-width: 214px;
+    margin: 8px auto 0 auto;
+    color: var(--clr-font-secondary);
+  }
+  
+  & a {
+    color: var(--clr-font-secondary);
+    text-decoration: underline;
+  }
+
+  &__form {
+    &__input {
+      display: block;
+      padding: 16px 24px;
+      border: 2px solid var(--clr-font-secondary);
+      background-color: transparent;
+      color: var(--clr-font-light);
+      border-radius: 32px;
+      margin: 0 auto 24px auto;
+      width: 240px;
+      font-size: 13px;
+
+      @media screen and (min-width: $br-tablet) {
+        padding: 18px 32px;
+        width: 310px;
+      }
+
+      &::placeholder {
+        color: var(--clr-font-light);
+      }
+
+      &:focus {
+        outline: transparent;
+        background-color: var(--clr-font-secondary);
+      }
+    }
+  }
+
+  &__close-btn {
+    position: absolute;
+    top: 42px;
+    right: 42px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+  }
+}

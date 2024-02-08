@@ -1,0 +1,35 @@
+.carousel-btn {
+    display: none;
+    width: 44px;
+    height: 44px;
+    background-color: transparent;
+    border: 1px solid var(--clr-font-primary);
+    border-radius: 50%;
+    flex-shrink: 0;
+
+    @media screen and (min-width: $br-tablet) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &:hover {
+      background-color: var(--clr-btn);
+      border: 1px solid var(--clr-font-light);
+      
+      & svg {
+        fill: var(--clr-font-light);
+      }
+    }
+
+    &.next {
+      transform: rotate(180deg);
+    }
+
+    & svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--clr-font-primary);
+      transition: fill 0.2s;
+    }
+  }

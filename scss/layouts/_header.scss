@@ -1,0 +1,96 @@
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+
+  padding: 16px 16px;
+
+  @media screen and (min-width: $br-desktop) {
+    background-color: var(--clr-background-header);
+    backdrop-filter: var(--background-header-blur);
+    padding: 32px 16px;
+    margin: 0 auto;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 32px;
+  }
+
+  &__logo {
+
+    width: 57px;
+    height: 32px;
+
+    @media screen and (min-width: $br-phone) {
+      width: 74px;
+      height: 42px;
+    }
+  }
+
+  &__nav-menu {
+    display: none;
+
+    @media screen and (min-width: $br-desktop) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 56px;
+
+      &__link {
+        font-size: 18px;
+        color: var(--clr-font-primary);
+
+        &:hover {
+          color: var(--clr-accent);
+        }
+      }
+    }
+  }
+
+  &__social {
+    display: none;
+
+    @media screen and (min-width: $br-desktop) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 32px;
+      cursor: pointer;
+
+      &__icon {
+        width: 32px;
+        height: 32px;
+        fill: var(--clr-font-primary);
+
+        &:hover {
+          fill: var(--clr-accent);
+        }
+      }
+    }
+  }
+
+  &__burger {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    fill: var(--clr-font-light);
+
+    @media screen and (min-width: $br-phone) {
+      width: 32px;
+      height: 32px;
+    }
+
+    @media screen and (min-width: $br-desktop) {
+      display: none;
+    }
+  }
+}

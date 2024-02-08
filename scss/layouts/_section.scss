@@ -1,0 +1,36 @@
+.section {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+
+  &__title {
+    color: var(--clr-font-primary);
+    font-family: var(--font-family-1);
+    font-size: 32px;
+    font-weight: 500;
+    max-width: 264px;
+    
+    @media screen and (min-width: $br-tablet) {
+      font-family: var(--font-family-2);
+      font-size: 48px;
+      font-weight: 700;
+      max-width: 336px;
+    }
+
+    @media screen and (min-width: $br-desktop) {
+      font-family: var(--font-family-2);
+      font-size: 64px;
+      font-weight: 700;
+      max-width: 530px;
+    }
+
+    & .accent {
+      color: var(--clr-accent);
+    }
+
+    &.centered {
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+}

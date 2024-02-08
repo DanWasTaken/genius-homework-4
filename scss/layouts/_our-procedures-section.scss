@@ -1,0 +1,71 @@
+.our-procedures {
+  margin-top: 40px;
+
+  @media screen and (min-width: $br-tablet) {
+    margin-top: 96px;
+  }
+
+  &__carousel {
+    width: 100%;
+    max-width: 1240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    margin-top: 24px;
+    padding: 0 16px;
+
+    @media screen and (min-width: $br-tablet) {
+      margin-top: 36px;
+    }
+
+    @media screen and (min-width: $br-desktop) {
+      margin-top: 48px;
+    }
+  }
+
+  &__card {
+    position: relative;
+    // width: 344px;
+    margin: 0 auto;
+    max-width: 320px;
+    height: 416px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 32px;
+    background: linear-gradient(180deg, rgba(1, 28, 68, 0.00) 48.53%, rgba(1, 28, 68, 0.73) 84.61%, #011C44 101.39%);
+    background-repeat: no-repeat;
+    border-radius: 4px 120px;
+    border: 1px solid transparent;
+
+    @media screen and (min-width: $br-tablet) {
+      max-width: 344px;
+      height: 456px;
+    }
+
+    &-image {
+      object-fit: cover;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      border-radius: 4px 120px;
+      z-index: -1;
+    }
+
+    &-title {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 1.2em;
+      text-align: center;
+      max-width: 152px;
+      color: var(--clr-font-light);
+
+      @media screen and (min-width: $br-tablet) {
+        font-size: 22px;
+      }
+    }
+  }
+}

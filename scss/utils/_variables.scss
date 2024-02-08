@@ -1,0 +1,19 @@
+:root {
+  --clr-font-primary: #011c44;
+  --clr-font-light: #fff;
+  --clr-background-primary: #fff;
+  --clr-background-dark: #011c44;
+  --clr-background-header: rgba(255, 255, 255, 0.25);
+  --clr-background-modal: rgba(1, 31, 74, 0.40);
+  --clr-accent: #2b7fff;
+  --clr-btn: #2b7fff;
+  --clr-font-secondary: #747272;
+  --clr-font-secondary-dark: #4A4A4A;
+  --background-header-blur: blur(5px);
+  --font-family-1: 'Roboto', sans-serif;
+  --font-family-2: 'Play', sans-serif;
+}
+
+$br-desktop: 1200px;
+$br-tablet: 768px;
+$br-phone: 480px;
